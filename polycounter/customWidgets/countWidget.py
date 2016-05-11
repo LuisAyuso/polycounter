@@ -15,12 +15,12 @@ class CountWidget(QFrame):
         self.hlayout = QHBoxLayout(self.up)
 
         self.name_lab = QLabel(self.up)
-        self.key_lab = QLabel(self.up)
+        #3self.key_lab = QLabel(self.up)
         self.name_lab.setText("<i>" + name + "</i>")
-        self.key_lab.setText("<b>" + key + "</b>")
+        #self.key_lab.setText("<b>" + key + "</b>")
 
         self.hlayout.addWidget(self.name_lab)
-        self.hlayout.addWidget(self.key_lab)
+        #self.hlayout.addWidget(self.key_lab)
 
         self.counter = QLCDNumber(self)
 
@@ -28,6 +28,7 @@ class CountWidget(QFrame):
         self.vlayout.addWidget(self.counter)
 
         self.setToolTip('This is my own widget')
+
 
     def set_name(self, name):
         self.name_lab.setText("<i>" + name + "</i>")
